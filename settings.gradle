@@ -1,21 +1,23 @@
-// For building exoplayer-specific sample apps, which are located under the 'brightcove-exoplayer' directory.
-include ':brightcove-exoplayer:360VideoSampleApp'
-include ':brightcove-exoplayer:BasicCastGoogleReceiverSampleApp'
-include ':brightcove-exoplayer:BasicCastBrightcoveReceiverSampleApp'
-include ':brightcove-exoplayer:AdRulesIMASampleApp'
-include ':brightcove-exoplayer:AdRulesIMAWidevineModularSampleApp'
-include ':brightcove-exoplayer:AppCompatActivitySampleApp'
-include ':brightcove-exoplayer:AppCompatFragmentSampleApp'
-include ':brightcove-exoplayer:BasicSsaiSampleApp'
-include ':brightcove-exoplayer:BasicSampleApp'
-include ':brightcove-exoplayer:LiveSampleApp'
-include ':brightcove-exoplayer:OfflinePlaybackSampleApp'
-include ':brightcove-exoplayer:PictureInPictureSampleApp'
-include ':brightcove-exoplayer:TextureViewSampleApp'
-include ':brightcove-exoplayer:WidevineModularSampleApp'
-include ':brightcove-exoplayer:VideoListSampleApp'
-include ':brightcove-exoplayer:BasicIMAVASTSampleApp'
-include ':brightcove-exoplayer:ThumbnailScrubberSampleApp'
+// For building exoplayer-specific sample apps, which are located under the 'exoplayer-java' directory.
+include ':exoplayer-java:360VideoSampleApp'
+include ':exoplayer-java:BasicCastGoogleReceiverSampleApp'
+include ':exoplayer-java:BasicCastBrightcoveReceiverSampleApp'
+include ':exoplayer-java:AdRulesIMASampleApp'
+include ':exoplayer-java:AdRulesIMAWidevineModularSampleApp'
+include ':exoplayer-java:AppCompatActivitySampleApp'
+include ':exoplayer-java:AppCompatFragmentSampleApp'
+include ':exoplayer-java:BasicSsaiSampleApp'
+include ':exoplayer-java:BasicSampleApp'
+include ':exoplayer-java:LiveSampleApp'
+include ':exoplayer-java:OfflinePlaybackSampleApp'
+include ':exoplayer-java:PictureInPictureSampleApp'
+include ':exoplayer-java:TextureViewSampleApp'
+include ':exoplayer-java:WidevineModularSampleApp'
+include ':exoplayer-java:VideoListSampleApp'
+include ':exoplayer-java:BasicIMAVASTSampleApp'
+include ':exoplayer-java:ThumbnailScrubberSampleApp'
+
+include ':exoplayer-kotlin:AudioOnlySampleApp'
 
 // For building Brightcove Player Controls specific sample apps, which are located under the 'brightcove-player-controls' directory.
 include ':brightcove-player-controls:CustomizedControlsSampleApp'
@@ -29,12 +31,12 @@ include ':brightcove-player-controls:SeekBarColorsSampleApp'
 // folder under your home directory.
 // This aar archive must be acquired from FreeWheel by you.
 if (freewheelDependenciesAreSatisfied()) {
-    include ':brightcove-exoplayer:FreeWheelSampleApp'
-    include ':brightcove-exoplayer:FreeWheelWidevineModularSampleApp'
+    include ':exoplayer-java:FreeWheelSampleApp'
+    include ':exoplayer-java:FreeWheelWidevineModularSampleApp'
 }
 
 if (pulseDependenciesAreSatisfied()) {
-    include ':brightcove-exoplayer:PulseSampleApp'
+    include ':exoplayer-java:PulseSampleApp'
 }
 
 boolean freewheelDependenciesAreSatisfied() {
@@ -46,3 +48,5 @@ boolean pulseDependenciesAreSatisfied() {
     File dep = file("${System.getProperty("user.home")}/libs/Pulse.aar")
     return dep.exists()
 }
+
+include ':exoplayer-kotlin:AudioOnlySample:audioonlysample'
